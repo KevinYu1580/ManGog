@@ -56,11 +56,11 @@ body {
  
 /* ------coverpic------ */
 .cover {
-    height: 1280px;
+    height: 1084px;
     width: 100%;
 }
 .cover .leaves_wrap {
-    height: 1280px;
+    height: 1084px;
     width: 100%;
     position: absolute;
     overflow: hidden;
@@ -220,22 +220,14 @@ body {
     z-index: -1;
 }
 .mb_num18 {
-    width: 76px;
+    width: 72px;
     position: absolute;
-    top: 847px;
+    top: 860px;
     left: 7px;
     transform: translateX(200px) rotate(323deg) scaleX(-1);
-    filter: blur(8px);
+    filter: blur(10px);
     z-index: -1;
 }
-
-
-
-
-
-
-
-
 /* leaves */
 .cover .coverpic {
     width: 240px;
@@ -309,6 +301,86 @@ body {
     transform-origin: 100% 100%;
     transform: rotate(40deg);
 }
+/* ------introduction------ */ 
+.text_align {
+    text-align: justify;
+}
 
+.introduction {
+    padding: 180px 24px;
+    background-image: url(images/introduction_bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%  0%;
+    margin-bottom: 60px;
+}
+.introduction .headline {
+    width: fit-content;
+    margin-right: auto;
+    margin-bottom: 24px ;
+}
+.introduction p {
+    font-size: 22px;
+    line-height: 140%;
+}
+/* ------story------ */
+.story {
+    padding: 180px 24px;
+    background-image: url(images/story_bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%  0%;
+    margin-bottom: 120px;
+}
+.story .headline {
+    width: fit-content;
+    margin-right: auto;
+    margin-bottom: 24px ;
+}
+.story p {
+    font-size: 22px;
+    line-height: 140%;
+}
+/* ------environ------ */
+.environ .content {
+    padding: 0px 24px;
+    margin-bottom: 50px;
+}
+.environ .content .headline {
+    width: fit-content;
+    margin-right: auto;
+    margin-bottom: 24px ;
+}
+.environ .content p {
+    font-size: 22px;
+    line-height: 140%;
+}
+.taiwanmap_wrap {
+    width: 375px;
+    position: relative;
+    height: fit-content;
+    margin: auto;
+}
+.taiwanmap_wrap .map {
+    
+}
+.taiwanmap_wrap .tainan{
+    color: #fff;
+    position: absolute;
+    top: 272px;
+    left: 26%;
+    z-index: 1;
+    font-size: 16px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+
+.taiwanmap_wrap .magnifier {
+    position: absolute;
+    top: 260px;
+    right: 30px;
+    z-index: 2;
+}
 
 
