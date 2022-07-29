@@ -26,18 +26,20 @@ body {
     width: calc(100% - 36px);
     height: 52px;
     background-color: #FFF7E9;
-    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.074);
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.103);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     padding: 22px 18px 0px 18px;
     top: 0;
+    transition: 0.5s;
 }
 
 .top_nav .logo {
     width: 80px;
     cursor: pointer;
+    
 }
 
 .top_nav img {
@@ -70,52 +72,82 @@ body {
     width: 68px;
     position: absolute;
     top: -115px;
-    left: -185px;
-    transform: translateX(200px) rotate(328deg);
+    left: -30px;
+    transform: rotate(328deg);
+    transform-origin: 20px 80px;
     filter: blur(4px);
+    animation: mb_num1 4s infinite;
 }
+@keyframes mb_num1 {
+    0% { transform:  rotate(328deg); }
+    50% { transform:  rotate(322deg); }
+    100% { transform:  rotate(328deg); }
+}
+
+
+
 .mb_num2 {
     width: 86px;
     position: absolute;
     top: -19px;
-    left: -225px;
-    transform: translateX(200px) rotate(16deg) scaleX(1);
+    left: -25px;
+    transform:  rotate(16deg) scaleX(1);
     filter: blur(0px);
     z-index: -1;  
 }
 .mb_num3 {
     width: 68px;
     position: absolute;
-    top: 190px;
-    left: -225px;
-    transform: translateX(200px) rotate(344deg) scaleX(-1);
+    top: 179px;
+    left: -25px;
+    transform: rotate(344deg) scaleX(-1);
     filter: blur(7px);
-    z-index: -1;
+    z-index: 2;
+    animation: mb_num3 8s infinite;
 }
+@keyframes mb_num3 {
+    0% { transform:  rotate(340deg) scaleX(-1); }
+    50% { transform:  rotate(344deg) scaleX(-1); }
+    100% { transform:  rotate(340deg) scaleX(-1); }
+}
+
 .mb_num4 {
     width: 68px;
     position: absolute;
     top: 208px;
-    left: -256px;
-    transform: translateX(200px) rotate(347deg) scaleX(-1);
+    left: -56px;
+    transform:  rotate(347deg) scaleX(-1);
     filter: blur(2px);
     z-index: 1;
+    animation: mb_num4 4.5s infinite;
 }
+@keyframes mb_num4 {
+    0% { transform:  rotate(347deg) scaleX(-1); }
+    50% { transform:  rotate(340deg) scaleX(-1); }
+    100% { transform:  rotate(347deg) scaleX(-1); }
+}
+
 .mb_num5 {
     width: 33px;
     position: absolute;
     top: 546px;
-    left: -158px;
-    transform: translateX(200px) rotate(318deg) scaleX(-1);
+    left: 41px;
+    transform: rotate(318deg) scaleX(-1);
     filter: blur(0px);
     z-index: 1;
+    animation: mb_num5 6s infinite;
+}
+@keyframes mb_num5 {
+    0% {  top: 546px }
+    50% { top: 530px  }
+    100% { top: 546px }
 }
 .mb_num6 {
     width: 80px;
     position: absolute;
     top: 515px;
-    left: -271px;
-    transform: translateX(200px) rotate(321deg) scaleX(1);
+    left: -71px;
+    transform:  rotate(321deg) scaleX(1);
     filter: blur(8px);
     z-index: 1;
 }
@@ -123,8 +155,8 @@ body {
     width: 57px;
     position: absolute;
     top: 718px;
-    left: -89px;
-    transform: translateX(200px) rotate(57deg) scaleX(1);
+    left: 89px;
+    transform:  rotate(57deg) scaleX(1);
     filter: blur(0px);
     z-index: 1;
 }
@@ -132,8 +164,8 @@ body {
     width: 48px;
     position: absolute;
     top: -78px;
-    left: 118px;
-    transform: translateX(200px) rotate(51deg) scaleX(-1);
+    right: 8px;
+    transform:  rotate(51deg) scaleX(-1);
     filter: blur(6px);
     z-index: 1;
 }
@@ -141,26 +173,40 @@ body {
     width: 125px;
     position: absolute;
     top: -98px;
-    left: 122px;
-    transform: translateX(200px) rotate(351deg) scaleX(-1);
+    right: -74px;
+    transform:  rotate(351deg) scaleX(-1);
     filter: blur(1px);
     z-index: -1;
+    animation: mb_num9 6s infinite;
+}
+@keyframes mb_num9 {
+    0% { transform:  rotate(351deg) scaleX(-1); }
+    50% { transform:  rotate(355deg) scaleX(-1); }
+    100% { transform:  rotate(351deg) scaleX(-1); }
 }
 .mb_num10 {
     width: 125px;
     position: absolute;
-    top: 10px;
-    left: 113px;
-    transform: translateX(200px) rotate(345deg) scaleX(-1);
+    transform-origin: 0px 10px;
+    top: 6px;
+    right: -166px;
+    transform: rotate(345deg) scaleX(-1);
     filter: blur(3px);
     z-index: -1;
+    animation: mb_num10 3s infinite;
 }
+@keyframes mb_num10 {
+    0% {   transform: rotate(345deg) scaleX(-1) }
+    50% {  transform: rotate(350deg) scaleX(-1)}
+    100% {  transform: rotate(345deg) scaleX(-1) }
+}
+
 .mb_num11 {
     width: 125px;
     position: absolute;
     top: -142px;
-    left: 12px;
-    transform: translateX(200px) rotate(3deg) scaleX(-1);
+    right: 11px;
+    transform:  rotate(3deg) scaleX(-1);
     filter: blur(8px);
     z-index: -1;
 }
@@ -168,8 +214,8 @@ body {
     width: 34px;
     position: absolute;
     top: 167px;
-    left: 152px;
-    transform: translateX(200px) rotate(38deg) scaleX(1);
+    right: -29px;
+    transform:  rotate(38deg) scaleX(1);
     filter: blur(4px);
     z-index: -1;
 }
@@ -177,35 +223,48 @@ body {
     width: 83px;
     position: absolute;
     top: 132px;
-    left: 164px;
-    transform: translateX(200px) rotate(17deg) scaleX(1);
+    right: -71px;
+    transform: rotate(17deg) scaleX(1);
     filter: blur(3px);
     z-index: -1;
+    animation: mb_num13 6s infinite;
+}
+@keyframes mb_num13 {
+    0% { transform: rotate(17deg) scaleX(1); }
+    50% { transform: rotate(26deg) scaleX(1); }
+    100% {transform: rotate(17deg) scaleX(1); }
 }
 .mb_num14 {
     width: 60px;
     position: absolute;
     top: 325px;
-    left: 68px;
-    transform: translateX(200px) rotate(357deg) scaleX(1);
+    right: 56px;
+    transform: rotate(357deg) scaleX(1);
     filter: blur(0px);
     z-index: -1;
 }
 .mb_num15 {
     width: 163px;
     position: absolute;
-    top: 482px;
-    left: 65px;
-    transform: translateX(200px) rotate(73deg) scaleX(1);
+    top: 486px;
+    right: -43px;
+    transform: rotate(73deg) scaleX(1);
     filter: blur(7px);
-    z-index: -1;
+    z-index: 2;
+    animation: mb_num15 6s infinite;
 }
+@keyframes mb_num15 {
+    0% {  top: 486px; transform: rotate(73deg) scaleX(1)}
+    50% {  top: 466px; transform: rotate(66deg) scaleX(1) }
+    100% {  top: 486px; transform: rotate(73deg) scaleX(1)}
+}
+
 .mb_num16 {
     width: 51px;
     position: absolute;
     top: 541px;
-    left: 153px;
-    transform: translateX(200px) rotate(16deg) scaleX(1);
+    right: -31px;
+    transform: rotate(16deg) scaleX(1);
     filter: blur(2px);
     z-index: 1;
 }
@@ -213,20 +272,35 @@ body {
     width: 76px;
     position: absolute;
     top: 586px;
-    left: 156px;
-    transform: translateX(200px) rotate(10deg) scaleX(1);
+    right: -58px;
+    transform: rotate(10deg) scaleX(1);
     filter: blur(1px);
     z-index: -1;
+    animation: mb_num17 10s infinite;
 }
+@keyframes mb_num17 {
+    0% { transform: rotate(10deg) scaleX(1); }
+    50% {  transform: rotate(-2deg) scaleX(1); }
+    100% { transform: rotate(10deg) scaleX(1);}
+}
+
 .mb_num18 {
     width: 72px;
     position: absolute;
-    top: 860px;
-    left: 7px;
-    transform: translateX(200px) rotate(323deg) scaleX(-1);
+    top: 852px;
+    right: 116px;
+    transform-origin: 0px 10px;
+    transform: rotate(323deg) scaleX(-1);
     filter: blur(10px);
     z-index: -1;
+    animation: mb_num18 10s infinite;
 }
+@keyframes mb_num18 {
+    0% { top: 852px; transform: rotate(323deg) scaleX(-1); }
+    50% { top: 832px; transform: rotate(316deg) scaleX(-1);  }
+    100% {top: 852px; transform: rotate(323deg) scaleX(-1); }
+}
+
 /* leaves */
 .cover .coverpic {
     width: 240px;
@@ -240,7 +314,13 @@ body {
 .cover .coverpic img{
     width: 100%;
     filter: drop-shadow(0px 0px 16px rgba(255, 198, 53, 0.87));
-    
+    animation:coverpic 7s infinite ;
+    transform: translateY(0);
+}
+@keyframes coverpic {
+    0% {transform: translateY(0)}
+    50% {transform: translateY(12px)}
+    100% {transform: translateY(0)}
 }
 .cover .headline h2 {
     display: block;
@@ -480,8 +560,8 @@ body {
     width: 148px;
     position: absolute;
     top: -68px;
-    left: -288px;
-    transform: translateX(200px) rotate(296deg) scaleX(-1);
+    left: -88px;
+    transform: rotate(296deg) scaleX(-1);
     filter: blur(0px);
     z-index: 1;
 }
@@ -489,26 +569,37 @@ body {
     width: 105px;
     position: absolute;
     top: -145px;
-left: -307px;
-    transform: translateX(200px) rotate(341deg) scaleX(-1);
+    left: -105px;
+    transform: rotate(341deg) scaleX(-1);
     filter: blur(4px);
     z-index: 1;
 }
 .mb_num21 {
     width: 128px;
     position: absolute;
-    top: 2px;
-    left: -356px;
-    transform: translateX(200px) rotate(303deg) scaleX(1);
+    top: -9px;
+    left: -103px;
+    transform-origin: 80px 280px;
+    transform: rotate(303deg) scaleX(1);
     filter: blur(8px);
     z-index: 1;
+    animation: mb_num21 4s infinite;
 }
+@keyframes mb_num21 {
+    0% {transform: rotate(303deg) scaleX(1);}
+    50% {transform: rotate(295deg) scaleX(1);}
+    100% {transform: rotate(303deg) scaleX(1); }
+
+
+}
+
+
 .mb_num22 {
     width: 254px;
     position: absolute;
     top: 295px;
-    left: -293px;
-    transform: translateX(200px) rotate(10deg) scaleX(1);
+    left: -100px;
+    transform: rotate(10deg) scaleX(1);
     filter: blur(6px);
     z-index: -1;
 }
@@ -516,35 +607,43 @@ left: -307px;
     width: 171px;
     position: absolute;
     top: 380px;
-    right: 341px;
-    transform: translateX(200px) rotate(10deg) scaleX(1);
+    right: 112px;
+    transform: rotate(10deg) scaleX(1);
     filter: blur(1px);
     z-index: -2;
 }
 .mb_num24 {
-    width: 41px;
+    width: 35px;
     position: absolute;
-    top: -33px;
-    right: 199px;
-    transform: translateX(200px) rotate(24deg) scaleX(-1);
+    top: 9px;
+    right: -55px;
+    transform-origin: 0px 0px;
+    transform: rotate(24deg) scaleX(-1);
     filter: blur(0px);
     z-index: -2;
+    animation: mb_num24 3s infinite;
 }
+@keyframes mb_num24 {
+    0% {transform: rotate(30deg) scaleX(-1);}
+    50% {transform: rotate(22deg) scaleX(-1);}
+    100% {transform: rotate(30deg) scaleX(-1);}
+}
+    
 .mb_num25 {
     width: 150px;
     position: absolute;
-    top: 132px;
-    right: 114px;
-    transform: translateX(200px) rotate(5deg) scaleX(1);
+    top: 166px;
+    right: -88px;
+    transform: rotate(5deg) scaleX(1);
     filter: blur(1px);
     z-index: -2;
 }
 .mb_num26 {
-    width: 94px;
+    width: 106px;
     position: absolute;
-    top: 68px;
-    right: 101px;
-    transform: translateX(200px) rotate(44deg) scaleX(1);
+    top: 56px;
+    right: -130px;
+    transform: rotate(44deg) scaleX(1);
     filter: blur(6px);
     z-index: 0;
 }
@@ -552,8 +651,8 @@ left: -307px;
     width: 286px;
     position: absolute;
     top: 295px;
-    right: 94px;
-    transform: translateX(200px) rotate(0deg) scaleX(1);
+    right: -88px;
+    transform: rotate(2deg) scaleX(1);
     filter: blur(3px);
     z-index: -2;
 }

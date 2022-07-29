@@ -42,6 +42,10 @@
             border-radius: 100px;
 
         }
+
+        .fa-xmark {
+            width: 22px;
+        }
     </style>
 </head>
 
@@ -53,6 +57,7 @@
         </div>
         <div class="righticon">
             <i class="menuIcon fa-solid fa-bars"></i>
+            <!-- <i class="menuIcon fa-solid fa-xmark"></i> -->
 
         </div>
 
@@ -217,21 +222,27 @@
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="./jquery-3.6.0.min.js"></script>
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+    </script>
     <script>
 
 
-        /------topnav------/
+
+
         $('.righticon').click(function () {
-            if ($(this).val('<i class="menuIcon fa-solid fa-bars"></i>')) {
-                $('.righticon > i').attr('class', 'menuIcon fa-solid fa-xmark')
-            }
-            $('.top_nav').css('height', '494px').css('border-radius', '0 0 20px 20px')
+            console.log(321)
+            $(this).val()
+            
+            
+
+
+
+
+            $('.top_nav').css('height', '494px').css('border-radius', '0 0 32px 32px')
+            
 
         })
-
-
+        
 
     </script>
 
