@@ -42,24 +42,29 @@
             border-radius: 100px;
 
         }
-
-        .fa-xmark {
-            width: 22px;
-        }
     </style>
 </head>
 
 <body>
     <!------top nav------>
-    <div class="top_nav">
-        <div class="logo">
-            <img src="images/Logo.svg" alt="">
+    <div id='top_nav' class="">
+        <div class="logo_icon_combined">
+            <div class="logo">
+                <img src="images/Logo.svg" alt="">
+            </div>
+            <div class="righticon">
+                <i class="menuIcon fa-solid fa-bars "></i>
+                <!-- <i class="menuIcon fa-solid fa-xmark"></i> -->
+            </div>
         </div>
-        <div class="righticon">
-            <i class="menuIcon fa-solid fa-bars"></i>
-            <!-- <i class="menuIcon fa-solid fa-xmark"></i> -->
+        <ul>
+            <li>首頁</li>
+            <li>紅鑽芒果介紹</li>
+            <li>我們的故事</li>
+            <li>生長環境</li>
+            <li>禮盒訂購</li>
+        </ul>
 
-        </div>
 
     </div>
     <!------cover------>
@@ -223,26 +228,33 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
-    </script>
+        </script>
     <script>
 
 
+        $('.righticon i').click(function (e) {
+
+            // 變更icon
+            $(this).toggleClass('fa-xmark')
+
+            $('#top_nav').toggleClass('expended')
+
+            // nav>ul原始css為display:none
+            // j query設定點選後display改為initial
+            $('#top_nav ul').show(180)
 
 
-        $('.righticon').click(function () {
-            console.log(321)
-            $(this).val()
-            
-            
+            let topNav_height = $('#top_nav').height()
 
 
-
-
-            $('.top_nav').css('height', '494px').css('border-radius', '0 0 32px 32px')
-            
-
+            if (topNav_height > 399) {
+                $('#top_nav ul').hide()
+            }
         })
-        
+
+
+
+
 
     </script>
 
