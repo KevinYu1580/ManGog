@@ -227,33 +227,41 @@
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
-        </script>
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+    </script>
     <script>
 
-
+// top nav 收合
         $('.righticon i').click(function (e) {
 
-            // 變更icon
+        // 變更icon
             $(this).toggleClass('fa-xmark')
-
+        // 展開nav bar
             $('#top_nav').toggleClass('expended')
-
-            // nav>ul原始css為display:none
-            // j query設定點選後display改為initial
+            // 原始nav ul設定為display:none
+            // jq 設定點選後為show出ul
             $('#top_nav ul').show(180)
 
-
+            // 超過nav height原始值:52px後點選收合ul
             let topNav_height = $('#top_nav').height()
 
-
-            if (topNav_height > 399) {
+            if (topNav_height > 52) {
                 $('#top_nav ul').hide()
             }
         })
-
-
-
+        
+// top nav  scrollTo
+        let navListNum0 = $('#top_nav ul li').eq(0)
+        let navListNum1 = $('#top_nav ul li').eq(1)
+        let navListNum2 = $('#top_nav ul li').eq(2)
+        let navListNum3 = $('#top_nav ul li').eq(3)
+        let navListNum4 = $('#top_nav ul li').eq(4)
+        navListNum0.click(function(){
+            console.log(321)
+            $('#top_nav ul').hide()
+            $('#top_nav').removeClass('expended')
+            $('html, body').animate({scrollTop:0},1200)
+        })
 
 
     </script>
