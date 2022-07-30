@@ -47,6 +47,9 @@
 
 <body>
     <!------top nav------>
+    <div class="logo_pc">
+        <img src="images/Logo.svg" alt="">
+    </div>
     <div id='top_nav' class="">
         <div class="logo_icon_combined">
             <div class="logo">
@@ -65,6 +68,16 @@
             <li>禮盒訂購</li>
         </ul>
 
+
+    </div>
+    <div id='right_nav' class="">
+        <ul>
+            <li>首頁</li>
+            <li>紅鑽芒果介紹</li>
+            <li>我們的故事</li>
+            <li>生長環境</li>
+            <li>禮盒訂購</li>
+        </ul>
 
     </div>
     <!------cover------>
@@ -89,13 +102,34 @@
             <img class='mb_num17' src="images/Leave4.svg" alt="">
             <img class='mb_num18' src="images/Leave4.svg" alt="">
         </div>
+        <div class="leaves_pc leaves_wrap_top">
+            <img class='pc_num1' src="images/Leave4.svg" alt="">
+            <img class='pc_num2' src="images/Leave1.svg" alt="">
+            <img class='pc_num3' src="images/Leave2.svg" alt="">
+            <img class='pc_num4' src="images/Leave2.svg" alt="">
+            <img class='pc_num5' src="images/Leave1.svg" alt="">
+            <img class='pc_num6' src="images/Leave1.svg" alt="">
+            <img class='pc_num7' src="images/Leave4.svg" alt="">
+            <img class='pc_num8' src="images/Leave3.svg" alt="">
+            <img class='pc_num9' src="images/Leave3.svg" alt="">
+            <img class='pc_num9' src="images/Leave1.svg" alt="">
+
+
+
+        </div>
         <div class="coverpic">
             <img src="images/Mango.png" alt="">
         </div>
-        <div class="headline">
+        <div class="headline_mb">
             <h2>紅鑽石芒果</h2>
         </div>
-        <div class="subtitle">
+        <div class="headline_pc">
+            <h2>紅鑽石芒果</h2>
+        </div>
+        <div class="subtitle_mb">
+            <h3>粒粒都是果農的掌上明珠。</h3>
+        </div>
+        <div class="subtitle_pc">
             <h3>粒粒都是果農的掌上明珠。</h3>
         </div>
         <div class="scroll_indic">
@@ -112,7 +146,7 @@
     </section>
     <!-- ----introduction ------>
     <section class="introduction">
-        <div class="headline">
+        <div id='sec2_headline' class="headline">
             <img src="images/introduction_headline.svg" alt="">
         </div>
         <p class="text_align">
@@ -126,7 +160,7 @@
     </section>
     <!-- --- story-->
     <section class="story">
-        <div class="headline">
+        <div id='sec3_headline' class="headline">
             <img src="images/story_headline.svg" alt="">
         </div>
         <p class="text_align">
@@ -141,7 +175,7 @@
     <!-- ----environ---- -->
     <section class="environ">
         <div class="content">
-            <div class="headline">
+            <div id='sec4_headline' class="headline">
                 <img src="images/environ.svg" alt="">
             </div>
             <p class="text_align">
@@ -179,7 +213,7 @@
             <img src="images/gift_box.svg" alt="">
         </div>
         <div class="content">
-            <div class="headline">
+            <div id='sec5_headline' class="headline">
                 <img src="images/purchase_headline.svg" alt="">
             </div>
             <p class="text_align">
@@ -215,7 +249,6 @@
             <div id='ctaBtn_mb' class="purchase_cta">
                 立即訂購
             </div>
-            <img src="" alt="">
         </div>
     </section>
     <div class="footer">
@@ -227,16 +260,15 @@
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
-    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
-    </script>
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+        </script>
     <script>
 
-// top nav 收合
+    // top nav 收合
         $('.righticon i').click(function (e) {
-
-        // 變更icon
+            // 變更icon
             $(this).toggleClass('fa-xmark')
-        // 展開nav bar
+            // 展開nav bar
             $('#top_nav').toggleClass('expended')
             // 原始nav ul設定為display:none
             // jq 設定點選後為show出ul
@@ -249,19 +281,66 @@
                 $('#top_nav ul').hide()
             }
         })
+
+    // top nav  scrollTo
         
-// top nav  scrollTo
+        
         let navListNum0 = $('#top_nav ul li').eq(0)
         let navListNum1 = $('#top_nav ul li').eq(1)
         let navListNum2 = $('#top_nav ul li').eq(2)
         let navListNum3 = $('#top_nav ul li').eq(3)
         let navListNum4 = $('#top_nav ul li').eq(4)
-        navListNum0.click(function(){
+        let changeIcon = 
+        navListNum0.click(function () {
+            console.log(321)
+            $('.righticon i').removeClass('fa-xmark')
+            $('#top_nav ul').hide()
+            $('#top_nav').removeClass('expended')
+            $('html, body').animate({ scrollTop: 0 }, 1600)
+        })
+        navListNum1.click(function () {
+            $('.righticon i').removeClass('fa-xmark')
+            $('#top_nav ul').hide()
+            $('#top_nav').removeClass('expended')
+
+            $('html, body').animate({ scrollTop:$('#sec2_headline').offset().top - 100}, 1600)
+
+            console.log($('#sec2_headline').offset().top)
+        })
+        navListNum2.click(function () {
+            $('.righticon i').removeClass('fa-xmark')
+            $('#top_nav ul').hide()
+            $('#top_nav').removeClass('expended')
+            $('html, body').animate({ scrollTop: $('#sec3_headline').offset().top - 100 }, 1600)
+        })
+        navListNum3.click(function () {
+            $('.righticon i').removeClass('fa-xmark')
             console.log(321)
             $('#top_nav ul').hide()
             $('#top_nav').removeClass('expended')
-            $('html, body').animate({scrollTop:0},1200)
+            $('html, body').animate({ scrollTop: $('#sec4_headline').offset().top - 100 }, 1600)
         })
+        navListNum4.click(function () {
+            $('.righticon i').removeClass('fa-xmark')
+            $('#top_nav ul').hide()
+            $('#top_nav').removeClass('expended')
+            $('html, body').animate({ scrollTop: $('#sec5_headline').offset().top - 100}, 1600)
+        })
+    
+    // rightNav pointer indicator
+        $('#right_nav ul li').mouseenter(function(){
+            $(this).addClass('pointer_indicator')
+        })
+        $('#right_nav ul li').mouseleave(function(){
+            $(this).removeClass('pointer_indicator')
+        })
+
+
+    // mango drop
+
+        
+
+
 
 
     </script>

@@ -19,7 +19,12 @@ body {
     font-family: var(--content_font);
 }
 
-/* ------top nav----- */
+/* ------ nav----- */
+.logo_pc {
+    position: absolute;
+    top: 24px;
+    left: 68px;
+}
 #top_nav {
     position: fixed;
     z-index: 999;
@@ -31,6 +36,42 @@ body {
     padding: 22px 18px 0px 18px;
     top: 0;
     transition: 0.3s;
+}
+@media screen and (min-width: 768px){
+    #top_nav {
+        display: none;
+    }
+}
+#right_nav {
+    position: fixed;
+    bottom: 12%;
+    right: 80px;
+    
+}
+#right_nav ul {
+    width: 126px;
+}
+#right_nav ul li {
+    display: block;
+    width: fit-content;
+    margin-bottom: 38px;
+    cursor: pointer;
+    z-index: 9999;
+    color:var(--text_color);
+    position: relative;
+    font-size: 16px;
+    padding: 6px 0px 6px 20px;
+}
+@media screen and (max-width: 767px){
+    #right_nav ul li {
+        display: none;
+    }
+}
+.pointer_indicator {
+    transform: translateX(-4px);
+    border-left: 10px solid var(--prime_color_default);
+    transition: 0.3s;
+    
 }
 .expended {
     height: 400px !important;
@@ -88,13 +129,36 @@ body {
     height: 1084px;
     width: 100%;
 }
+
+
 .cover .leaves_wrap_top {
     height: 1084px;
     width: 100%;
     position: absolute;
     overflow: hidden;
     z-index: 500;
+    
 }
+@media screen and (min-width: 768px){
+    .cover .leaves_wrap_top, .cover {
+        height: 1636px;
+}
+}
+@media screen and (min-width: 768px){
+    .leaves_mb{
+        display: none;
+    }
+}
+.leaves_pc{
+    z-index: -1 !important;
+}
+@media screen and (max-width: 767px){
+    .leaves_pc{
+        display: none;
+        
+    }
+}
+
 .mb_num1 {
     width: 68px;
     position: absolute;
@@ -328,6 +392,102 @@ body {
     100% {top: 852px; transform: rotate(323deg) scaleX(-1); }
 }
 
+.pc_num1 {
+    width: 179px;
+    position: absolute;
+    top: -251px;
+    left: 628px;
+    transform-origin: 0px 10px;
+    transform: rotate(29deg) scaleX(-1);
+    filter: blur(12px);
+    z-index: -1;
+}
+.pc_num2 {
+    width: 250px;
+    position: absolute;
+    top: -262px;
+    left: 406px;
+    transform-origin: 0px 10px;
+    transform: rotate(20deg) scaleX(1);
+    filter: blur(1px);
+    z-index: -2;
+}
+.pc_num3 {
+    width: 142px;
+    position: absolute;
+    top: -404px;
+    left: 566px;
+    transform-origin: 0px 10px;
+    transform: rotate(354deg) scaleX(-1);
+    filter: blur(2px);
+    z-index: -2;
+}
+.pc_num4 {
+    width: 118px;
+    position: absolute;
+    top: 30px;
+    left: -156px;
+    transform-origin: 0px 10px;
+    transform: rotate(323deg) scaleX(1);
+    filter: blur(2px);
+    z-index: -2;
+}
+.pc_num5 {
+    width: 163px;
+    position: absolute;
+    top: 203px;
+    left: -28px;
+    transform-origin: 0px 10px;
+    transform: rotate(298deg) scaleX(-1);
+    filter: blur(2px);
+    z-index: -2;
+}
+.pc_num6 {
+    width: 167px;
+    position: absolute;
+    top: 268px;
+    left: -9px;
+    transform-origin: 0px 10px;
+    transform: rotate(310deg) scaleX(-1);
+    filter: blur(0px);
+    z-index: -3;
+}
+.pc_num7 {
+    width: 182px;
+    position: absolute;
+    top: 656px;
+    left: -180px;
+    transform-origin: 0px 10px;
+    transform: rotate(30deg) scaleX(1);
+    filter: blur(16px);
+    z-index: 0;
+}
+.pc_num8 {
+    width: 79px;
+    position: absolute;
+    top: 705px;
+    left: -35px;
+    transform-origin: 0px 10px;
+    transform: rotate(329deg) scaleX(1);
+    filter: blur(1px);
+    z-index: -1;
+}
+.pc_num9 {
+    width: 86px;
+    position: absolute;
+    top: 776px;
+    left: -67px;
+    transform-origin: 0px 10px;
+    transform: rotate(336deg) scaleX(1);
+    filter: blur(4px);
+    z-index: -1;
+}
+
+
+
+
+
+
 /* leaves */
 .cover .coverpic {
     width: 240px;
@@ -335,8 +495,15 @@ body {
     margin-top: 74px;
     margin-bottom: 48px;
     padding-top: 66px;
+}
+@media screen and (min-width: 768px){
+    .cover .coverpic {
+    width: 520px;
+    margin-top: 0px;
+    padding-top: 140px;
+    margin-bottom: 76px;
     
-
+    }
 }
 .cover .coverpic img{
     width: 100%;
@@ -349,7 +516,7 @@ body {
     50% {transform: translateY(12px)}
     100% {transform: translateY(0)}
 }
-.cover .headline h2 {
+.cover .headline_mb {
     display: block;
     margin: auto;
     width: fit-content;
@@ -358,9 +525,29 @@ body {
     color: var(--prime_color_dark);
     margin-bottom: 28px;
     filter: drop-shadow(0px 0px 12px rgb(255, 198, 53));
-    
 }
-.cover .subtitle h3 {
+@media screen and (min-width: 768px){
+    .cover .headline_mb {
+        display: none;
+    }
+}
+.cover .headline_pc {
+    display: block;
+    width: fit-content;
+    position: absolute;
+    top: 409px;
+    left: 268px;
+    font-size: 56px;
+    font-weight: 400;
+    color: var(--prime_color_dark);
+    filter: drop-shadow(0px 0px 20px rgb(253, 192, 38));
+}
+@media screen and (max-width: 767px){
+    .cover .headline_pc h2 {
+        display: none;
+    }
+}
+.cover .subtitle_mb {
     display: block;
     margin: auto;
     width: fit-content;
@@ -368,6 +555,27 @@ body {
     letter-spacing: 1.5px;
     color: var(--text_color);
     margin-bottom: 56px;
+}
+@media screen and (min-width: 768px){
+    .cover .subtitle_mb {
+        display:none ;
+    }
+}
+.cover .subtitle_pc {
+    display: block;
+    width: fit-content;
+    position: absolute;
+    top: 497px;
+    left: 295px;
+    font-size: 26px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: var(--text_color);
+}
+@media screen and (max-width: 767px){
+    .cover .subtitle_pc {
+        display: none;
+    }
 }
 .scroll_indic {
     font-size: 16px;
@@ -377,6 +585,11 @@ body {
     display: flex;
     flex-direction: column;
 }
+@media screen and (min-width: 768px){
+    .scroll_indic {
+        font-size: 18px;
+    }
+}
 .indic_line {
     width: 1px;
     height: 50px;
@@ -384,6 +597,11 @@ body {
     margin: auto;
     margin-top: 12px;
     position: relative;
+}
+@media screen and (min-width: 768px){
+    .indic_line {
+    height: 60px;
+    }
 }
 .indic_line::before {
     content: '';
@@ -406,6 +624,12 @@ body {
     background-color: #c2c2c2;
     transform-origin: 100% 100%;
     transform: rotate(40deg);
+}
+@media screen and (min-width: 768px){
+    .indic_line::after, .indic_line::before {
+        width: 14px;
+
+}
 }
 /* ------introduction------ */ 
 .text_align {
