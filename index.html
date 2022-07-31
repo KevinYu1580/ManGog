@@ -33,14 +33,32 @@
             --bgc: #FFF0D6;
         }
 
-        #ctaBtn_mb {
-            width: fit-content;
+        .ctaBtn {
             background-color: var(--prime_color_dark);
             padding: 12px 48px;
             color: #fff;
-            font-size: 20px;
+            font-size: 16px;
             border-radius: 100px;
+            font-weight: 400;
+            border: none;
+            width: fit-content;
+            display: block;
+            text-decoration: none;
+            cursor: pointer;
+            transition: .3s;
+        }
 
+        .ctaBtn:hover {
+            background-color: var(--prime_color_default);
+            color: var(--secondary_color_dark);
+        }
+
+        @media screen and (min-width: 768px) {
+            .ctaBtn {
+                font-size: 18px;
+
+
+            }
         }
     </style>
 </head>
@@ -217,9 +235,10 @@
         </div>
         <div class="location">
             <div class="mask"></div>
-            <div id="ctaBtn_mb" class="location_mapcheck">
+            <a class='ctaBtn location_mapcheck' href="">
                 查看地圖
-            </div>
+            </a>
+
 
         </div>
     </section>
@@ -232,26 +251,29 @@
         <div class="gift_box">
             <img src="images/gift_box.svg" alt="">
         </div>
-        <div class="content">
-            <div id='sec5_headline' class="headline">
-                <img src="images/purchase_headline.svg" alt="">
-            </div>
-            <p class="text_align">
-                愛芒禮盒訂團購的紅鑽芒果，耗用鉅資與契作果農合作，採用日本引進的微生物製劑（枯草桿菌、放射菌、光合成菌）幫助對抗病蟲害，並讓土壤堆肥化減少用藥。<br><br>
+        <div class="wrap_forPc">
+            <div class="content">
+                <div id='sec5_headline' class="headline">
+                    <img src="images/purchase_headline.svg" alt="">
+                </div>
+                <p class="text_align">
+                    愛芒禮盒訂團購的紅鑽芒果，耗用鉅資與契作果農合作，採用日本引進的微生物製劑（枯草桿菌、放射菌、光合成菌）幫助對抗病蟲害，並讓土壤堆肥化減少用藥。<br><br>
 
-                契作果園遍布全台各個愛文芒果產區，包含玉井、南化、楠西、楓港、枋寮、枋山……等地，顆顆在株自然熟成，並配合產期即時現採、現選、現包為愛文紅鑽芒果禮盒，依芒果團購、訂購單依序出貨。所產果實甜美飽滿，並定期與多所著名大學教授研究使
-                用成效及劑量，務求無毒無害，讓每顆果實都都天然健康、清甜鮮美。
-            </p>
-        </div>
-        <div class="checks">
-            <div class="check">
-                <img src="images/check 1_mb.svg" alt="">
+                    契作果園遍布全台各個愛文芒果產區，包含玉井、南化、楠西、楓港、枋寮、枋山……等地，顆顆在株自然熟成，並配合產期即時現採、現選、現包為愛文紅鑽芒果禮盒，依芒果團購、訂購單依序出貨。所產果實甜美飽滿，並定期與多所著名大學教授研究使
+                    用成效及劑量，務求無毒無害，讓每顆果實都都天然健康、清甜鮮美。
+                </p>
             </div>
-            <div class="check">
-                <img src="images/check 2_mb.svg" alt="">
-            </div>
-            <div class="check">
-                <img src="images/check 3_mb.svg" alt="">
+            <div class="checks">
+                <div class="check">
+                    <img src="images/check 1_mb.svg" alt="">
+                </div>
+                <div class="check">
+                    <img src="images/check 2_mb.svg" alt="">
+                </div>
+                <div class="check ">
+                    <img src="images/check 3_mb.svg" alt="">
+                </div>
+                
             </div>
         </div>
         <div class="cta_wrap">
@@ -266,9 +288,26 @@
                 <img class='mb_num26' src="images/Leave3.svg" alt="">
                 <img class='mb_num27' src="images/mango_pilled1.svg" alt="">
             </div>
-            <div id='ctaBtn_mb' class="purchase_cta">
-                立即訂購
+            <div class="leaves_pc leaves_wrap_bot">
+                <img class='pc_num26' src="images/Leave2.svg" alt="">
+                <img class='pc_num27' src="images/Leave1.svg" alt="">
+                <img class='pc_num28' src="images/mango_pilled2.svg" alt="">
+                <img class='pc_num29' src="images/Mango.png" alt="">
+                <img class='pc_num30' src="images/Leave3.svg" alt="">
+                <img class='pc_num31' src="images/Leave1.svg" alt="">
+                <img class='pc_num32' src="images/Mango.png" alt="">
+                <img class='pc_num33' src="images/mango_pilled1.svg" alt="">
+                <img class='pc_num34' src="images/Mango.png" alt="">
+                <img class='pc_num35' src="images/Mango.png" alt="">
+                <img class='pc_num36' src="images/Leave2.svg" alt="">
+                <img class='pc_num37' src="images/Leave4.svg" alt="">
+                <img class='pc_num38' src="images/Leave5.svg" alt="">
+                <img class='pc_num39' src="images/Leave4.svg" alt="">
+                
             </div>
+            <a class='ctaBtn purchase_cta' href="">
+                立即訂購
+            </a>
         </div>
     </section>
     <div class="footer">
@@ -284,7 +323,7 @@
         </script>
     <script>
 
-        // top nav 收合
+    // top nav 收合
         $('.righticon i').click(function (e) {
             // 變更icon
             $(this).toggleClass('fa-xmark')
@@ -302,7 +341,7 @@
             }
         })
 
-        // top nav  scrollTo
+    // top nav  scrollTo
 
 
         let navListNum0 = $('#top_nav ul li').eq(0)
@@ -347,7 +386,7 @@
             $('html, body').animate({ scrollTop: $('#sec5_headline').offset().top - 100 }, 1600)
         })
 
-        // rightNav pointer indicator
+    // rightNav pointer indicator
         $('#right_nav ul li').mouseenter(function () {
             $(this).addClass('pointer_indicator')
         })
