@@ -1431,13 +1431,6 @@ body {
 }
 
 
-@media screen and (min-width: 1024px) {
-    .mango_branch #branch {
-        width: 366px;
-        transform: translateX(-17px);
-    }
-
-}
 
 .mango_branch #drop {
     width: 54px;
@@ -1446,15 +1439,6 @@ body {
     left: 50px;
     transform: rotate(357deg);
 
-}
-
-@media screen and (min-width: 1024px) {
-    .mango_branch #drop {
-        width: 72px;
-        position: absolute;
-        top: 149px;
-        left: 101px;
-    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -1472,13 +1456,6 @@ body {
 .gift_box img {
     width: 320px;
     margin: 0 auto 0 20px;
-}
-
-@media screen and (min-width: 1024px) {
-    .gift_box img {
-        width: 423px;
-        margin: 0 auto 0 63px;
-    }
 }
 
 .purchase .content {

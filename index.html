@@ -35,7 +35,7 @@
 
         .ctaBtn {
             background-color: var(--prime_color_dark);
-            padding: 12px 48px;
+            padding: 12px 48px 14px 48px;
             color: #fff;
             font-size: 16px;
             border-radius: 100px;
@@ -401,7 +401,7 @@
             $('html, body').animate({ scrollTop: 0 }, 1600)
         })
         RnavListNum1.click(function(){
-            $('html, body').animate({ scrollTop: $('#sec2_headline').offset().top - 300 }, 1600)
+            $('html, body').animate({ scrollTop: $('#sec2_headline').offset().top -300 }, 1600)
             
         })
         RnavListNum2.click(function(){
@@ -478,7 +478,7 @@
             ().top - scrollNow
 
             // 1
-            if(fadeIn_topspace_1 <= 401) {
+            if(fadeIn_topspace_1 <= 601) {
                 $('.content_fadeIn_1').css({
                     'opacity': '1',
                     'transform': 'translateX(0px)',
@@ -491,7 +491,7 @@
                 })
             }
             // 2
-            if(fadeIn_topspace_2 <= 401) {
+            if(fadeIn_topspace_2 <= 601) {
                 $('.content_fadeIn_2').css({
                     'opacity': '1',
                     'transform': 'translateX(0px)',
@@ -504,7 +504,7 @@
                 })
             }
             // 3
-            if(fadeIn_topspace_3 <= 401) {
+            if(fadeIn_topspace_3 <= 501) {
                 $('.content_fadeIn_3').css({
                     'opacity': '1',
                     'transform': 'translateX(0px)',
@@ -517,7 +517,7 @@
                 })
             }
             // 4
-            if(fadeIn_topspace_4 <= 601) {
+            if(fadeIn_topspace_4 <= 701) {
                 $('.content_fadeIn_4').css({
                     'opacity': '1',
                     'transform': 'translateX(0px)',
@@ -541,15 +541,16 @@
 
     // mango drop
         $(window).scroll(function(){
-            // let mango_topspace = $('.mango_branch #drop').offset() - $(window).scrollTop()
-            // console.log(mango_topspace)
-
-            if ($(window).scrollTop() >= 5242){
+            let branchWindowTop = $('.mango_branch #branch').offset().top - $(window).scrollTop()
+            // 以樹枝為定位, 因為芒果本身需要固定在可視視窗上, 和window的高度是固定的, 故無法以芒果定位
+            if(branchWindowTop <= 160){
                 $('.mango_branch #drop').css({
                     'position':'fixed',
-                    'top': '304px'
+                    'top': '284px'
                 })
-                $('.mango_branch #branch').css('animation', 'branch_move 1.5s')
+
+                $('.mango_branch #branch').css('animation','branch_move 1.5s')
+                
             }
             else {
                 $('.mango_branch #drop').css({
@@ -558,11 +559,41 @@
                 })
                 $('.mango_branch #branch').css('animation', '')
             }
-            if ($(window).scrollTop() >= 5705){
+            
+            let boxWindowTop = $('.gift_box').offset().top - $(window).scrollTop()
+            console.log(boxWindowTop)
+            if (boxWindowTop <= 270){
                 $('.mango_branch #drop').css({
                 'position':'absolute',
                 'top': '586px'
-            })}
+                })
+
+            }
+
+
+                
+           
+
+
+            // if ($(window).scrollTop() >= 5242){
+            //     $('.mango_branch #drop').css({
+            //         'position':'fixed',
+            //         'top': '304px'
+            //     })
+            //     $('.mango_branch #branch').css('animation', 'branch_move 1.5s')
+            // }
+            // else {
+            //     $('.mango_branch #drop').css({
+            //         'position':'absolute',
+            //         'top': '124px'
+            //     })
+            //     $('.mango_branch #branch').css('animation', '')
+            // }
+            // if ($(window).scrollTop() >= 5705){
+            //     $('.mango_branch #drop').css({
+            //     'position':'absolute',
+            //     'top': '586px'
+            // })}
             
             
         })
