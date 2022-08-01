@@ -47,11 +47,13 @@
             cursor: pointer;
             transition: .3s;
         }
-
-        .ctaBtn:hover {
+        @media screen and (min-width: 768px){
+            .ctaBtn:hover {
             background-color: var(--prime_color_default);
             color: var(--secondary_color_dark);
         }
+        }
+        
 
         @media screen and (min-width: 768px) {
             .ctaBtn {
@@ -60,9 +62,13 @@
 
             }
         }
-        .content_fadeIn {
-            
+        .content_fadeIn_1, .content_fadeIn_2, .content_fadeIn_3, .content_fadeIn_4 {
+            opacity: 0;
+            transition: .5s;
+            transform: translateX(-12px);
         }
+        
+        
     </style>
 </head>
 
@@ -183,10 +189,10 @@
     <!-- ----introduction ------>
     <section class="introduction">
         <div class="content_wrap_pc">
-            <div id='sec2_headline' class="headline content_fadeIn">
+            <div id='sec2_headline' class="headline content_fadeIn_1">
                 <img src="images/introduction_headline.svg" alt="">
             </div>
-            <p class="text_align">
+            <p class="text_align content_fadeIn_1">
                 所謂的「紅鑽石芒果」就是指產銷班挑出品質最高, 最優良的愛文芒果!<br><br>
 
                 紅艷鮮嫩的外表是愛文芒果的特色，但要如何讓它外表亮的如紅鑽石，陽光是首要條件，勤剪樹枝成了必要工作。另外，採收的步驟也相當嚴謹，採收過程中, 絕對不能讓嬌貴的紅鑽石碰撞，不然果肉就會纖維化，因此,
@@ -199,10 +205,10 @@
     <!-- --- story-->
     <section class="story">
         <div class="content_wrap_pc">
-            <div id='sec3_headline' class="headline">
+            <div id='sec3_headline' class="headline content_fadeIn_2">
                 <img src="images/story_headline.svg" alt="">
             </div>
-            <p class="text_align">
+            <p class="text_align content_fadeIn_2">
                 愛芒果園於2016年開始對外開放，營業時間為每年國曆5月至隔年1月，上午8：00-下午5：00，園裡的一切都已有數十年的歷史，園主-邱智仁堅持一貫的種植理念，果園的果樹皆定期的施肥及修剪，讓果園中的芒果充足日曬,
                 不但甜美且多汁，沒有農藥殘留讓愛吃芒果的朋友們吃的安心!!<br><br>
 
@@ -215,10 +221,10 @@
     <section class="environ">
         <div class="environ_flex">
             <div class="content content_wrap_pc">
-                <div id='sec4_headline' class="headline">
+                <div id='sec4_headline' class="headline content_fadeIn_3">
                     <img src="images/environ.svg" alt="">
                 </div>
-                <p class="text_align">
+                <p class="text_align content_fadeIn_3">
 
                     台南市玉井區位於台南的東南方，為丘陵山坡地形，四面環山，中間為天然盆地，此區日照充足，擁有肥沃土壤，加上有豐沛雨水的灌溉，非常適合各種果樹的栽種，栽種出來的果樹品質都很良好，甜度很高。玉井芒果可以用顏色來區分芒果的風味，例如綠色小顆的名為
                     – 檨仔青，紅色圓滾滾的名為 – 蘋果檨，黃色較長條狀的名為 – 香蕉檨(耳熟能詳的金煌芒果就是以他為母體培育出來的。<br><br>
@@ -238,7 +244,7 @@
         </div>
         <div class="location">
             <div class="mask"></div>
-            <a class='ctaBtn location_mapcheck' href="">
+            <a class='ctaBtn location_mapcheck' href="https://www.google.com.tw/maps/place/%E7%8E%89%E4%BA%95%E6%9C%89%E9%96%93%E5%86%B0%E8%88%96%E8%8A%92%E6%9E%9C%E5%86%B0/@23.1097477,120.4355025,14z/data=!4m9!1m2!2m1!1z546J5LqVIOiKkuaenA!3m5!1s0x346e61139e0fceb7:0xd9ede24cb90394d5!8m2!3d23.1248638!4d120.4622428!15sCg3njonkupUg6IqS5p6cWg8iDeeOieS6lSDoipLmnpySARJkZXNzZXJ0X3Jlc3RhdXJhbnQ?hl=zh-TW" target="_blank">
                 查看地圖
             </a>
 
@@ -256,10 +262,10 @@
         </div>
         <div class="wrap_forPc">
             <div class="content">
-                <div id='sec5_headline' class="headline">
+                <div id='sec5_headline' class="headline content_fadeIn_4">
                     <img src="images/purchase_headline.svg" alt="">
                 </div>
-                <p class="text_align">
+                <p class="text_align content_fadeIn_4">
                     愛芒禮盒訂團購的紅鑽芒果，耗用鉅資與契作果農合作，採用日本引進的微生物製劑（枯草桿菌、放射菌、光合成菌）幫助對抗病蟲害，並讓土壤堆肥化減少用藥。<br><br>
 
                     契作果園遍布全台各個愛文芒果產區，包含玉井、南化、楠西、楓港、枋寮、枋山……等地，顆顆在株自然熟成，並配合產期即時現採、現選、現包為愛文紅鑽芒果禮盒，依芒果團購、訂購單依序出貨。所產果實甜美飽滿，並定期與多所著名大學教授研究使
@@ -308,7 +314,7 @@
                 <img class='pc_num39' src="images/Leave4.svg" alt="">
                 
             </div>
-            <a class='ctaBtn purchase_cta' href="">
+            <a class='ctaBtn purchase_cta' href="https://docs.google.com/forms/d/1e6pjpEIbqFbh8wi6V8N-otaF-_Yz_yyvUQN5Btp16Eg/edit" target="_blank">
                 立即訂購
             </a>
         </div>
@@ -429,7 +435,7 @@
                 $('.mb_num4').css('top', '-=1')
                 $('.mb_num5').css('top', '-=2')
                 $('.mb_num6').css('top', '-=4')
-                $('.mb_num7').css('top', '-=1')
+                $('.mb_num7').css('top', '-=4')
                 $('.mb_num10').css('top', '-=2')
                 $('.mb_num15').css('top', '-=8')
                 $('.mb_num16').css('top', '-=2')
@@ -442,7 +448,7 @@
                 $('.mb_num4').css('top', '+=1')
                 $('.mb_num5').css('top', '+=2')
                 $('.mb_num6').css('top', '+=4')
-                $('.mb_num7').css('top', '+=1')
+                $('.mb_num7').css('top', '+=4')
                 $('.mb_num10').css('top', '+=2')
                 $('.mb_num15').css('top', '+=8')
                 $('.mb_num16').css('top', '+=2')
@@ -454,26 +460,112 @@
         })
 
     // content fade in
-    
-
         $(window).scroll(function(){
+        
             let scrollNow =  $(window).scrollTop();
 
-            let fadeIn_topspace = $('.content_fadeIn').offset().top - scrollNow
-            console.log(fadeIn_topspace)
+            let fadeIn_topspace_1 = $('.content_fadeIn_1').offset
+            ().top - scrollNow
             
-            if(fadeIn_topspace < 301) {
-                
+
+            let fadeIn_topspace_2 = $('.content_fadeIn_2').offset
+            ().top - scrollNow
+            
+            let fadeIn_topspace_3 = $('.content_fadeIn_3').offset
+            ().top - scrollNow
+
+            let fadeIn_topspace_4 = $('.content_fadeIn_4').offset
+            ().top - scrollNow
+
+            // 1
+            if(fadeIn_topspace_1 <= 401) {
+                $('.content_fadeIn_1').css({
+                    'opacity': '1',
+                    'transform': 'translateX(0px)',
+                })
             }
-            
+            else{
+                $('.content_fadeIn_1').css({
+                    'opacity': '0',
+                    'transform': 'translateX(-12px)',
+                })
+            }
+            // 2
+            if(fadeIn_topspace_2 <= 401) {
+                $('.content_fadeIn_2').css({
+                    'opacity': '1',
+                    'transform': 'translateX(0px)',
+                })
+            }
+            else{
+                $('.content_fadeIn_2').css({
+                    'opacity': '0',
+                    'transform': 'translateX(-12px)',
+                })
+            }
+            // 3
+            if(fadeIn_topspace_3 <= 401) {
+                $('.content_fadeIn_3').css({
+                    'opacity': '1',
+                    'transform': 'translateX(0px)',
+                })
+            }
+            else{
+                $('.content_fadeIn_3').css({
+                    'opacity': '0',
+                    'transform': 'translateX(-12px)',
+                })
+            }
+            // 4
+            if(fadeIn_topspace_4 <= 601) {
+                $('.content_fadeIn_4').css({
+                    'opacity': '1',
+                    'transform': 'translateX(0px)',
+                })
+            }
+            else{
+                $('.content_fadeIn_4').css({
+                    'opacity': '0',
+                    'transform': 'translateX(-12px)',
+                })
+            }
+
+        })
+    // map
+        $('.taiwanmap_wrap .tainan').click(function(){
+            $('.taiwanmap_wrap .magnifier').toggleClass('opacity')
         })
         
 
-            
-       
+   
 
     // mango drop
+        $(window).scroll(function(){
+            // let mango_topspace = $('.mango_branch #drop').offset() - $(window).scrollTop()
+            // console.log(mango_topspace)
 
+            if ($(window).scrollTop() >= 5242){
+                $('.mango_branch #drop').css({
+                    'position':'fixed',
+                    'top': '304px'
+                })
+                $('.mango_branch #branch').css('animation', 'branch_move 1.5s')
+            }
+            else {
+                $('.mango_branch #drop').css({
+                    'position':'absolute',
+                    'top': '124px'
+                })
+                $('.mango_branch #branch').css('animation', '')
+            }
+            if ($(window).scrollTop() >= 5705){
+                $('.mango_branch #drop').css({
+                'position':'absolute',
+                'top': '586px'
+            })}
+            
+            
+        })
 
 
 
