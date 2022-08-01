@@ -1458,6 +1458,7 @@ body {
     margin: 0 auto 0 20px;
 }
 
+
 .purchase .content {
     padding: 0 24px;
     margin-bottom: 60px;
@@ -1469,7 +1470,16 @@ body {
         margin-bottom: 0px;
     }
 }
-
+.purchase  {
+    position: relative;
+}
+.purchase_pic {
+    width: 500px;
+    top: 0;
+    left: 200px;
+    position: absolute;
+    z-index: -2;
+}
 .purchase .headline {
     width: fit-content;
     margin-right: auto;

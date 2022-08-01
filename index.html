@@ -253,6 +253,7 @@
     </section>
     <!-- ----purchase---- -->
     <section class="purchase">
+        <img class="purchase_pic" src="/images/mangoChart.png" alt="">
         <div class="mango_branch">
             <img id="branch" src="images/Mango_branch.svg" alt="">
             <img id="drop" src="images/Mango_drop.svg" alt="">
@@ -543,10 +544,10 @@
         $(window).scroll(function(){
             let branchWindowTop = $('.mango_branch #branch').offset().top - $(window).scrollTop()
             // 以樹枝為定位, 因為芒果本身需要固定在可視視窗上, 和window的高度是固定的, 故無法以芒果定位
-            if(branchWindowTop <= 160){
+            if(branchWindowTop <= 180){
                 $('.mango_branch #drop').css({
                     'position':'fixed',
-                    'top': '284px'
+                    'top': '304px'
                 })
 
                 $('.mango_branch #branch').css('animation','branch_move 1.5s')
@@ -562,7 +563,7 @@
             
             let boxWindowTop = $('.gift_box').offset().top - $(window).scrollTop()
             console.log(boxWindowTop)
-            if (boxWindowTop <= 270){
+            if (boxWindowTop <= 290){
                 $('.mango_branch #drop').css({
                 'position':'absolute',
                 'top': '586px'
