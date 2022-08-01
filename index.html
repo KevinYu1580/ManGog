@@ -60,6 +60,9 @@
 
             }
         }
+        .content_fadeIn {
+            
+        }
     </style>
 </head>
 
@@ -180,7 +183,7 @@
     <!-- ----introduction ------>
     <section class="introduction">
         <div class="content_wrap_pc">
-            <div id='sec2_headline' class="headline">
+            <div id='sec2_headline' class="headline content_fadeIn">
                 <img src="images/introduction_headline.svg" alt="">
             </div>
             <p class="text_align">
@@ -343,47 +346,66 @@
 
     // top nav  scrollTo
 
-
-        let navListNum0 = $('#top_nav ul li').eq(0)
-        let navListNum1 = $('#top_nav ul li').eq(1)
-        let navListNum2 = $('#top_nav ul li').eq(2)
-        let navListNum3 = $('#top_nav ul li').eq(3)
-        let navListNum4 = $('#top_nav ul li').eq(4)
+        let LnavListNum0 = $('#top_nav ul li').eq(0)
+        let LnavListNum1 = $('#top_nav ul li').eq(1)
+        let LnavListNum2 = $('#top_nav ul li').eq(2)
+        let LnavListNum3 = $('#top_nav ul li').eq(3)
+        let LnavListNum4 = $('#top_nav ul li').eq(4)
         let changeIcon =
-            navListNum0.click(function () {
-                console.log(321)
+            LnavListNum0.click(function () {
                 $('.righticon i').removeClass('fa-xmark')
                 $('#top_nav ul').hide()
                 $('#top_nav').removeClass('expended')
                 $('html, body').animate({ scrollTop: 0 }, 1600)
             })
-        navListNum1.click(function () {
+        LnavListNum1.click(function () {
             $('.righticon i').removeClass('fa-xmark')
             $('#top_nav ul').hide()
             $('#top_nav').removeClass('expended')
 
             $('html, body').animate({ scrollTop: $('#sec2_headline').offset().top - 100 }, 1600)
 
-            console.log($('#sec2_headline').offset().top)
         })
-        navListNum2.click(function () {
+        LnavListNum2.click(function () {
             $('.righticon i').removeClass('fa-xmark')
             $('#top_nav ul').hide()
             $('#top_nav').removeClass('expended')
             $('html, body').animate({ scrollTop: $('#sec3_headline').offset().top - 100 }, 1600)
         })
-        navListNum3.click(function () {
+        LnavListNum3.click(function () {
             $('.righticon i').removeClass('fa-xmark')
-            console.log(321)
             $('#top_nav ul').hide()
             $('#top_nav').removeClass('expended')
             $('html, body').animate({ scrollTop: $('#sec4_headline').offset().top - 100 }, 1600)
         })
-        navListNum4.click(function () {
+        LnavListNum4.click(function () {
             $('.righticon i').removeClass('fa-xmark')
             $('#top_nav ul').hide()
             $('#top_nav').removeClass('expended')
             $('html, body').animate({ scrollTop: $('#sec5_headline').offset().top - 100 }, 1600)
+        })
+    // right nav  scrollTo
+        let RnavListNum0 = $('#right_nav ul li').eq(0)
+        let RnavListNum1 = $('#right_nav ul li').eq(1)
+        let RnavListNum2 = $('#right_nav ul li').eq(2)
+        let RnavListNum3 = $('#right_nav ul li').eq(3)
+        let RnavListNum4 = $('#right_nav ul li').eq(4)
+
+        RnavListNum0.click(function(){
+            $('html, body').animate({ scrollTop: 0 }, 1600)
+        })
+        RnavListNum1.click(function(){
+            $('html, body').animate({ scrollTop: $('#sec2_headline').offset().top - 300 }, 1600)
+            
+        })
+        RnavListNum2.click(function(){
+            $('html, body').animate({ scrollTop: $('#sec3_headline').offset().top - 300 }, 1600)
+        })
+        RnavListNum3.click(function(){
+            $('html, body').animate({ scrollTop: $('#sec4_headline').offset().top - 80 }, 1600)
+        })
+        RnavListNum4.click(function(){
+            $('html, body').animate({ scrollTop: $('#sec5_headline').offset().top - 80 }, 1600)
         })
 
     // rightNav pointer indicator
@@ -394,6 +416,61 @@
             $(this).removeClass('pointer_indicator')
         })
 
+
+    // leaves scroll animation
+    let lastScroll = 0;
+
+        $(window).scroll(function(){
+            let scrollNow =  $(window).scrollTop();
+
+            if(scrollNow > lastScroll){
+                $('.mb_num1').css('top', '-=4')
+                $('.mb_num3').css('top', '-=5')
+                $('.mb_num4').css('top', '-=1')
+                $('.mb_num5').css('top', '-=2')
+                $('.mb_num6').css('top', '-=4')
+                $('.mb_num7').css('top', '-=1')
+                $('.mb_num10').css('top', '-=2')
+                $('.mb_num15').css('top', '-=8')
+                $('.mb_num16').css('top', '-=2')
+                $('.mb_num17').css('top', '-=1')
+                $('.mb_num18').css('top', '-=12')
+            }
+            else{
+                $('.mb_num1').css('top', '+=4')
+                $('.mb_num3').css('top', '+=5')
+                $('.mb_num4').css('top', '+=1')
+                $('.mb_num5').css('top', '+=2')
+                $('.mb_num6').css('top', '+=4')
+                $('.mb_num7').css('top', '+=1')
+                $('.mb_num10').css('top', '+=2')
+                $('.mb_num15').css('top', '+=8')
+                $('.mb_num16').css('top', '+=2')
+                $('.mb_num17').css('top', '+=1')
+                $('.mb_num18').css('top', '+=12')
+            }
+            
+            lastScroll = scrollNow;
+        })
+
+    // content fade in
+    
+
+        $(window).scroll(function(){
+            let scrollNow =  $(window).scrollTop();
+
+            let fadeIn_topspace = $('.content_fadeIn').offset().top - scrollNow
+            console.log(fadeIn_topspace)
+            
+            if(fadeIn_topspace < 301) {
+                
+            }
+            
+        })
+        
+
+            
+       
 
     // mango drop
 
