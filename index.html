@@ -430,6 +430,7 @@
 
         $(window).scroll(function(){
             let scrollNow =  $(window).scrollTop();
+            console.log(scrollNow)
 
             if(scrollNow > lastScroll){
                 $('.mb_num1').css('top', '-=4')
@@ -501,6 +502,7 @@
             
             lastScroll = scrollNow;
         })
+        
 
     // content fade in
         $(window).scroll(function(){
@@ -520,7 +522,7 @@
             let fadeIn_topspace_4 = $('.content_fadeIn_4').offset
             ().top - scrollNow
 
-            // 1
+            // sec1
             if(fadeIn_topspace_1 <= 601) {
                 $('.content_fadeIn_1').css({
                     'opacity': '1',
@@ -533,7 +535,7 @@
                     'transform': 'translateX(-12px)',
                 })
             }
-            // 2
+            // sec2
             if(fadeIn_topspace_2 <= 601) {
                 $('.content_fadeIn_2').css({
                     'opacity': '1',
@@ -546,7 +548,7 @@
                     'transform': 'translateX(-12px)',
                 })
             }
-            // 3
+            // sec3
             if(fadeIn_topspace_3 <= 501) {
                 $('.content_fadeIn_3').css({
                     'opacity': '1',
@@ -559,7 +561,7 @@
                     'transform': 'translateX(-12px)',
                 })
             }
-            // 4
+            // sec4
             if(fadeIn_topspace_4 <= 701) {
                 $('.content_fadeIn_4').css({
                     'opacity': '1',
@@ -614,7 +616,6 @@
 
     // mango cart fade out
         $(window).scroll(function(){
-           console.log($('.purchase .cart').offset().top - $(window).scrollTop())
 
            let cartTopSpace = $('.purchase .cart').offset().top - $(window).scrollTop()
            if (cartTopSpace < 345){

@@ -162,7 +162,7 @@ body {
 
     .cover .leaves_wrap_top,
     .cover {
-        height: 1482px;
+        height: 1600px;
     }
 }
 
@@ -1915,11 +1915,11 @@ body {
 
 
 .pc_num37 {
-    width: 67px;
+    width: 89px;
     position: absolute;
-    top: 276px;
-    left: 1394px;
-    transform: rotate(132deg) scaleX(-1);
+    top: 286px;
+    right: 294px;
+    transform: rotate(71deg) scaleX(-1);
     filter: blur(0px);
     z-index: -1;
 }
@@ -1953,11 +1953,12 @@ body {
 }
 
 .pc_num39 {
-    width: 155px;
+    width: 164px;
     position: absolute;
-    top: -64px;
-    left: 1723px;
-    transform: rotate(49deg) scaleX(-1);
+    top: 148px;
+    left: 2242px;
+    transform: rotate(58deg) scaleX(-1);
+    transform-origin: 0 0;
     filter: blur(9px);
     z-index: 2;
     animation: pc_num39 6s infinite;
@@ -1965,17 +1966,17 @@ body {
 
 @keyframes pc_num39 {
     0% {
-        transform: rotate(49deg) scaleX(-1);
+        transform: rotate(58deg) scaleX(-1);
     }
 
     50% {
 
-        transform: rotate(58deg) scaleX(-1);
+        transform: rotate(52deg) scaleX(-1);
     }
 
     100% {
 
-        transform: rotate(49deg) scaleX(-1);
+        transform: rotate(58deg) scaleX(-1);
     }
 }
 
