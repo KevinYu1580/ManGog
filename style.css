@@ -1193,6 +1193,7 @@ body {
     .introduction {
         padding: 400px 0px;
         background-image: linear-gradient(#ffffff62, #ffffff62), linear-gradient(#ffb52bd3, #ffffffaf, #72862bec), url(./images/mango_farmer1.png);
+        background-attachment: scroll, scroll, fixed;
         border-radius: 30% 70% 30% 70% / 50% 50% 50% 50%;
         margin-bottom: 220px;
     }
@@ -1229,6 +1230,7 @@ body {
     .story {
         padding: 400px 0px;
         background-image: linear-gradient(#ffffff62, #ffffff62), linear-gradient(#ffb52bd3, #ffffffaf, #72862bec), url(images/farmer2.png);
+        background-attachment: scroll, scroll, fixed;
         border-radius: 30% 70% 30% 70% / 50% 50% 50% 50%;
         background-position: 50% 50%;
         margin-bottom: 220px;
